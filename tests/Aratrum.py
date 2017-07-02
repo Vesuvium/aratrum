@@ -28,6 +28,11 @@ def config_file(config_teardown):
         f.write(config)
 
 
+@fixture
+def aratrum():
+    return Aratrum()
+
+
 def test_init():
     assert Aratrum().filename == 'config.json'
 
@@ -40,6 +45,21 @@ def test_get(config_file):
     result = Aratrum(filename='test.json').get()
     assert 'server' in result
     assert 'name' in result
+
+
+def test_set(aratrum):
+    aratrum.set('option', 'value')
+    assert aratrum.config['option'] == 'value'
+
+
+def test_delete(aratrum):
+    aratrum.config = {'option': 'value'}
+    aratrum.delete('option')
+    assert 'option' not in aratrum.config
+
+
+def test_delete_empty(aratrum):
+    aratrum.delete('option')
 
 
 def test_defaults():

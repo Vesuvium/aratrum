@@ -26,6 +26,22 @@ class Aratrum:
         self.config = {}
         return self.config
 
+    def set(self, option, value):
+        """
+        Sets an option to a value.
+        """
+        if self.config is None:
+            self.config = {}
+        self.config[option] = value
+
+    def delete(self, option):
+        """
+        Deletes an option if exists
+        """
+        if self.config is not None:
+            if option in self.config:
+                del self.config[option]
+
     def save(self):
         """
         Saves the configuration
