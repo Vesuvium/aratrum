@@ -9,13 +9,13 @@ readme = io.open('README.rst', 'r', encoding='utf-8').read()
 
 setup(
     name='aratrum',
-    description='A simple configuration handler',
+    description='A simple json configuration handler.',
     long_description=readme,
     url='https://github.com/Vesuvium/aratrum',
     author='Jacopo Cascioli',
     author_email='jacopocascioli@gmail.com',
     license='MIT',
-    version='0.0.1',
+    version='0.1.0',
     packages=find_packages(),
     tests_require=[
         'pytest',
