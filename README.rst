@@ -23,9 +23,9 @@ Load a configuration file::
 
 Set a value in the config and save it::
 
-    >>> config = Atratrum('config.json')
+    >>> config = Aratrum('config.json')
     >>> config.get()
-    >>> config.config['server'] = 'somewhere'
+    >>> config.set('server', 'somewhere')
     >>> config.save()
 
 
