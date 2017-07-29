@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+import os
+
 import ujson
 
 
@@ -9,7 +11,7 @@ class Aratrum:
 
     def __init__(self, filename='config.json'):
         self.config = None
-        self.filename = filename
+        self.filename = os.path.join(os.getcwd(), filename)
 
     def get(self):
         """

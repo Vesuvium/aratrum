@@ -34,12 +34,14 @@ def aratrum():
     return Aratrum()
 
 
-def test_init():
-    assert Aratrum().filename == 'config.json'
+def test_init(mocker):
+    expected = os.path.join(os.getcwd(), 'config.json')
+    assert Aratrum().filename == expected
 
 
 def test_init_filename():
-    assert Aratrum('config2.json').filename == 'config2.json'
+    expected = os.path.join(os.getcwd(), 'config2.json')
+    assert Aratrum('config2.json').filename == expected
 
 
 def test_get(config_file):
