@@ -8,10 +8,11 @@ class Aratrum:
     """
     Provides read/write access to the configuration.
     """
+    default = {}
 
     def __init__(self, filename='config.json'):
-        self.config = None
         self.filename = os.path.join(os.getcwd(), filename)
+        self.set_to_default()
 
     def get(self):
         """
@@ -21,12 +22,11 @@ class Aratrum:
             self.config = ujson.load(f)
         return self.config
 
-    def defaults(self):
+    def set_to_default(self):
         """
         Sets the configuration to default values
         """
-        self.config = {}
-        return self.config
+        self.config = self.default
 
     def set(self, option, value):
         """

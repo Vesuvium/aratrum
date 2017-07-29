@@ -44,6 +44,13 @@ def test_init_filename():
     assert Aratrum('config2.json').filename == expected
 
 
+def test_init_default(mocker):
+    mocker.patch.object(Aratrum, 'set_to_default')
+    aratrum = Aratrum()
+    assert aratrum.default == {}
+    assert Aratrum.set_to_default.call_count == 1
+
+
 def test_get(config_file):
     result = Aratrum(filename='test.json').get()
     assert 'server' in result
@@ -65,9 +72,11 @@ def test_delete_empty(aratrum):
     aratrum.delete('option')
 
 
-def test_defaults():
-    result = Aratrum().defaults()
-    assert type(result) == dict
+def test_set_to_default():
+    aratrum = Aratrum()
+    aratrum.default = None
+    aratrum.set_to_default()
+    assert aratrum.config is None
 
 
 def test_save(mocker, config_teardown):
