@@ -9,6 +9,12 @@ Was it really necessary to make a package for such a simple thing?
 Maybe not, but I like the DRYness of it, since almost every app will
 need a configuration reader.
 
+Installation
+############
+::
+
+    pip install aratrum
+
 Usage
 #####
 
