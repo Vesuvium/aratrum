@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-import ujson
 import os
 
 from unittest.mock import ANY
@@ -7,6 +6,8 @@ from unittest.mock import ANY
 from aratrum import Aratrum
 
 from pytest import fixture
+
+import ujson
 
 
 @fixture
