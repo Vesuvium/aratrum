@@ -38,6 +38,6 @@ Set a value in the config and save it::
 .. |Build Status| image:: https://img.shields.io/travis/Vesuvium/aratrum.svg?maxAge=3600&style=flat-square
    :target: https://travis-ci.org/Vesuvium/aratrum
 .. |Pypi| image:: https://img.shields.io/pypi/v/aratrum.svg?maxAge=3600&style=flat-square
-   :target: https://pypi.python.org/pypi/efesto
+   :target: https://pypi.python.org/pypi/aratrum
 .. |Code Climate| image:: https://img.shields.io/codeclimate/github/Vesuvium/aratrum.svg?maxAge=3600&style=flat-square
    :target: https://codeclimate.com/github/Vesuvium/aratrum
