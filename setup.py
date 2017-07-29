@@ -22,7 +22,9 @@ setup(
         'pytest-mock'
     ],
     setup_requires=['pytest-runner'],
-    install_requires=[],
+    install_requires=[
+        'ujson>=1.35'
+    ],
     classifiers=[
         'Intended Audience :: Developers',
         'Operating System :: OS Independent',
