@@ -15,7 +15,7 @@ setup(
     author='Jacopo Cascioli',
     author_email='jacopocascioli@gmail.com',
     license='MIT',
-    version='0.2.0',
+    version='0.3.0',
     packages=find_packages(),
     tests_require=[
         'pytest',
