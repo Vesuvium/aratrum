@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import json
+import ujson
 import os
 
 from unittest.mock import ANY
@@ -68,7 +68,7 @@ def test_defaults():
 
 
 def test_save(mocker, config_teardown):
-    mocker.patch.object(json, 'dump')
+    mocker.patch.object(ujson, 'dump')
     config = Aratrum('test.json')
     config.save()
-    json.dump.assert_called_with(config.config, ANY, indent=4)
+    ujson.dump.assert_called_with(config.config, ANY, indent=4)

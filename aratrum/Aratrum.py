@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-import json
+import ujson
 
 
 class Aratrum:
@@ -16,7 +16,7 @@ class Aratrum:
         Loads the configuration and returns it as a dictionary
         """
         with open(self.filename, 'r') as f:
-            self.config = json.load(f)
+            self.config = ujson.load(f)
         return self.config
 
     def defaults(self):
@@ -47,4 +47,4 @@ class Aratrum:
         Saves the configuration
         """
         with open(self.filename, 'w') as f:
-            json.dump(self.config, f, indent=4)
+            ujson.dump(self.config, f, indent=4)
